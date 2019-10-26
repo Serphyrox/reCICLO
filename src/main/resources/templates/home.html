@@ -61,16 +61,148 @@ html, body {
 				<ul class="nav nav-tabs" id="myTab" role="tablist">
 					<li class="nav-item"><a class="nav-link active"
 						id="details-tab" data-toggle="tab" href="#details" role="tab"
-						aria-controls="details" aria-selected="true">Details</a></li>
+						aria-controls="details" aria-selected="true">GENERAL</a></li>
 					<li class="nav-item"><a class="nav-link" id="attachments-tab"
 						data-toggle="tab" href="#attachments" role="tab"
-						aria-controls="attachments" aria-selected="false">Attachments</a></li>
+						aria-controls="attachments" aria-selected="false">HISTORIAL</a></li>
 				</ul>
 				<div class="tab-content" id="myTabContent">
 					<div class="tab-pane fade show active" id="details" role="tabpanel"
 						aria-labelledby="details-tab"></div>
 					<div class="tab-pane fade" id="attachments" role="tabpanel"
-						aria-labelledby="attachments-tab"></div>
+						aria-labelledby="attachments-tab">
+
+						<div class="container">
+							<div class="row">
+								<label class="col-md-1">Tipo de residuo:</label> <select
+									class="col-md-2">
+									<option value="envases">Envases</option>
+									<option value="desecho">Desecho comun</option>
+									<option value="papel">Papel y Cartón</option>
+									<option value="vidrio">Vidrio</option>
+									<option value="organico">Orgánico</option>
+								</select> <label class="col-md-1">C.P:</label> <input class="col-md-1"
+									type="text" /> <label class="col-md-1">Fecha desde:</label> <input
+									class="col-md-1" type="date" /> <label class="col-md-1">Hasta:</label>
+								<input class="col-md-1" type="date" />
+								<button class="col-md-2">Buscar</button>
+							</div>
+						</div>
+
+						<table class="table table-striped">
+							<thead class="thead-dark">
+								<tr>
+									<th>ID contenedor</th>
+									<th>Tipo Residuo</th>
+									<th>Direccion</th>
+									<th>CP</th>
+									<th>nº usado</th>
+									<th>Litros reciclados</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>3526</td>
+									<td>Vidrio</td>
+									<td>C/ Blasco ibañez,3</td>
+									<td>11032</td>
+									<td>250</td>
+									<td>700l</td>
+								</tr>
+								<tr>
+									<td>2243</td>
+									<td>Papel y Cartón</td>
+									<td>Av. Tralará</td>
+									<td>12036</td>
+									<td>1047</td>
+									<td>12kl</td>
+								</tr>
+								<tr>
+									<td>5132</td>
+									<td>Papel y Cartón</td>
+									<td>C/ Arquitecto guardiola</td>
+									<td>03013</td>
+									<td>884</td>
+									<td>844l</td>
+								</tr>
+								<tr>
+									<td>4123</td>
+									<td>Envases</td>
+									<td>Av. Xarxa, 44</td>
+									<td>11445</td>
+									<td>65</td>
+									<td>2000l</td>
+								</tr>
+								<tr>
+									<td>6454</td>
+									<td>Desecho común</td>
+									<td>C/ Oriente próximo</td>
+									<td>0663</td>
+									<td>1047</td>
+									<td>6kl</td>
+								</tr>
+								<tr>
+									<td>5243</td>
+									<td>Desecho Común</td>
+									<td>C/ Estrella Mandarín,31</td>
+									<td>1445</td>
+									<td>655</td>
+									<td>5kl</td>
+								</tr>
+								<tr>
+									<td>0987</td>
+									<td>Envases</td>
+									<td>C/ Castorcillo mono, 12</td>
+									<td>12036</td>
+									<td>1047</td>
+									<td>12kl</td>
+								</tr>
+								<tr>
+									<td>6785</td>
+									<td>Papel y Cartón</td>
+									<td>Av. Quehago JOAQUI, sn</td>
+									<td>12036</td>
+									<td>70</td>
+									<td>88l</td>
+								</tr>
+								<tr>
+									<td>9574</td>
+									<td>Organico</td>
+									<td>C/ Feliz de verdad, 22</td>
+									<td>03542</td>
+									<td>09</td>
+									<td>400L</td>
+								</tr>
+								<tr>
+									<td>2048</td>
+									<td>Envases</td>
+									<td>Av. Tralará</td>
+									<td>12036</td>
+									<td>1047</td>
+									<td>12kl</td>
+								</tr>
+								<tr>
+									<td>8888</td>
+									<td>Desecho común </td>
+									<td>C/ Común cerdito</td>
+									<td>52036</td>
+									<td>1255</td>
+									<td>88kl</td>
+								</tr>
+								<tr>
+									<td>6535</td>
+									<td>Papel y Cartón</td>
+									<td>Av. Bosques de la cruz, 22</td>
+									<td>12050</td>
+									<td>999</td>
+									<td>4002l</td>
+								</tr>
+
+
+							</tbody>
+						</table>
+
+					</div>
 				</div>
 			</div>
 			<a href="#" id="opener"
