@@ -14,6 +14,7 @@
 <link rel="stylesheet" type="text/css"
 	th:href="@{/css/datepicker.min.css}" />
 <link rel="stylesheet" type="text/css" th:href="@{/css/main.css}" />
+<link rel="stylesheet" type="text/css" th:href="@{/css/home.css}" />
 </head>
 <body>
 	<style>
@@ -29,16 +30,19 @@ html, body {
 </style>
 	<nav id="header"
 		class="navbar navbar-expand-lg sticky-top flex-md-nowrap p-0">
-		<div class="col-md-2 brand-logo h-100">
+		<div class="col-md-2 brand-logo h-100" style="margin-right: 2%">
 			<ul class="navbar-nav mr-auto">
 				<li class="nav-item"><span class="nav-link text-white">
 						<img th:src="@{img/logo_horizontal_blanco.png}" alt="reCICLO"
-						width="150px" />
+						width="170px" />
 				</span></li>
 			</ul>
 		</div>
-		<img th:src="@{img/logo_nombre.png}" alt="reCICLO" height="17px"
-			width="86px" style="margin-left: 1%;" />
+		<div class="row h-100">
+			<p class="text-white my-auto"
+				style="font-family: reCICLO; font-size: 21px">Castelló de la
+				plana</p>
+		</div>
 		<div class="ml-auto">
 			<ul class="navbar-nav">
 				<li class="nav-item dropdown ml-auto"><a
@@ -53,7 +57,7 @@ html, body {
 			</ul>
 		</div>
 	</nav>
-	<div class="row col-12" style="padding: 0; margin: -3px 0px 0px 0px;">
+	<div class="row col-12" style="padding: 0; margin: -5px 0px 0px 0px;">
 		<div id="container" class="col-md-8"
 			style="padding: 0; margin: 0; display: flex">
 			<div class="align-bottom col-md-11"
@@ -68,7 +72,56 @@ html, body {
 				</ul>
 				<div class="tab-content" id="myTabContent">
 					<div class="tab-pane fade show active" id="details" role="tabpanel"
-						aria-labelledby="details-tab"></div>
+						aria-labelledby="details-tab" style="margin: 1vw 2vw">
+						<div class="row">
+							<p style="font-family: reCICLO; font-size: 21px; color: #646464">Bienvenidos</p>
+						</div>
+						<ul>
+							<li class="texto">Estadisticas de reciclaje en tiempo real</li>
+							<li class="texto">Alertas de contenedores llenos</li>
+							<li class="texto">Generación de rutas de recogida más
+								eficientes</li>
+						</ul>
+						<div class="row">
+							<p class="subtitulos">Contenedores mas utilizados</p>
+						</div>
+						<table class="table">
+							<tbody>
+								<tr>
+									<th style="width: 15vw; background: #FED700"></th>
+									<th style="width: 12vw; background: #A2A0A1"></th>
+									<th style="width: 8vw; background: #2042A4"></th>
+									<th style="width: 5vw; background: #227407"></th>
+									<th style="width: 3vw; background: #64360C"></th>
+								</tr>
+							</tbody>
+						</table>
+						<div class="row" style="margin-left: 2vw">
+							<div
+								style="width: 16px; height: 16px; background: #FED700; border: solid 1px;"></div>
+							<p class="texto-pequeno my-auto">Envases</p>
+							<div
+								style="width: 16px; height: 16px; background: #A2A0A1; border: solid 1px;"></div>
+							<p class="texto-pequeno my-auto">Desecho común</p>
+							<div
+								style="width: 16px; height: 16px; background: #2042A4; border: solid 1px;"></div>
+							<p class="texto-pequeno my-auto">Papel y cartón</p>
+							<div
+								style="width: 16px; height: 16px; background: #227407; border: solid 1px;"></div>
+							<p class="texto-pequeno my-auto">Vidrio</p>
+							<div
+								style="width: 16px; height: 16px; background: #64360C; border: solid 1px;"></div>
+							<p class="texto-pequeno my-auto">Orgánico</p>
+						</div>
+						<div class="row" style="margin-top: 10px;">
+							<div class="col-md-6">
+								<p class="subtitulos">Contenedores mas utilizados</p>
+							</div>
+							<div class="col-md-6">
+								<p class="subtitulos">Contenedores mas utilizados</p>
+							</div>
+						</div>
+					</div>
 					<div class="tab-pane fade" id="attachments" role="tabpanel"
 						aria-labelledby="attachments-tab">
 
@@ -210,9 +263,9 @@ html, body {
 				style="color: #fff" class="fas fa-caret-right fa-5x"></i></a>
 		</div>
 		<div id="map-container" class="col-md-4"
-			style="z-index: 10; overflow: hidden; position: relative; height: 94vh; padding: 0; margin: 0;">
+			style="z-index: 10; overflow: hidden; position: relative; height: 92vh; padding: 0; margin: 0;">
 			<div id='mapShadow'
-				style="position: absolute; background: #000; z-index: 0; height: 94vh; width: 100%; opacity: 0.1"></div>
+				style="position: absolute; background: #000; z-index: 0; height: 92vh; width: 100%; opacity: 0.1"></div>
 			<div style="z-index: 5" id='map'></div>
 		</div>
 	</div>

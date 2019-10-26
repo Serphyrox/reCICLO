@@ -74,13 +74,13 @@ body, html {
 }
 
 #header {
-	background-color: #00ec00;
+	background-color: #5CB979;
 	/*margin-right: 5px;
 	margin-left: 5px;*/
 }
 
 .brand-logo {
-	border-right: 1px solid #00ec00;
+	border-right: 1px solid #5CB979;
 	margin: 0px;
 	padding: 0px;
 }
@@ -197,7 +197,7 @@ ul.sidebar-items li {
 }
 
 #header li {
-	border-left: 1px solid #00ec00;
+	border-left: 1px solid #5CB979;
 	font-family: 'Trebuchet MS'
 }
 
@@ -207,12 +207,12 @@ ul.sidebar-items li {
 }
 
 #header li #profile-dropdown a:hover {
-	background-color: #00ec00; ! important;
+	background-color: #5CB979; ! important;
 	font-weight: normal;
 }
 
 #header li a:hover {
-	background-color: #00ec00;
+	background-color: #5CB979;
 	font-weight: normal;
 }
 

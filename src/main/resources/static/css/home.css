@@ -12,3 +12,40 @@
 	width: 100%;
 	position: absolute;
 }
+
+@font-face {
+	font-family: reCICLO;
+	src: url("AvenirNextLTPro-Demi.otf") format("opentype");
+}
+
+@font-face {
+	font-family: reCICLONormal;
+	src: url("AvenirNextLTPro-It.otf") format("opentype");
+}
+
+ol.v {
+	list-style-type: none;
+}
+
+.table{
+	width: 60vw;
+	height: 50px;
+}
+
+.texto {
+	font-family: reCICLONormal;
+	font-size: 15px; 
+}
+
+.texto-pequeno {
+	font-family: reCICLONormal;
+	font-size: 11px; 
+	margin-right: 2vw;
+	margin-left: 10px;
+}
+
+.subtitulos {
+	font-family: reCICLO; 
+	font-size: 18px; 
+	color: #5CB979;
+}
