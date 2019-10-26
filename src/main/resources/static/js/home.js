@@ -17,13 +17,13 @@ $('#opener').on('click', function() {
 		map.addClass('col-md-1')
 		container.removeClass('col-md-8')
 		container.addClass('col-md-11')
-		$('#mapShadow').css('opacity', '0.2');
+		$('#mapShadow').css('z-index', '50');
 	} else {
 		map.removeClass('col-md-1')
 		map.addClass('col-md-4')
 		container.removeClass('col-md-11')
 		container.addClass('col-md-8')
-		$('#mapShadow').css('opacity', '0');
+		$('#mapShadow').css('z-index', '0');
 	}	
 	return false;	
 });
