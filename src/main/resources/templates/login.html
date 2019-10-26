@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+<meta charset="UTF-8">
+<title>reCICLO</title>
+<link th:href="@{css/bootstrap.min.css}" media="all" rel="stylesheet" />
+<!-- <link href="css/prettify.css" media="all" rel="stylesheet" /> -->
+<link th:href="@{css/login.css}" rel="stylesheet" />
+</head>
+<body class="text-center">
+	<div class="formsize">
+		<img class="logo" th:src="@{/img/logo.svg}" alt="reCICLO" width="380"
+			height="130" />
+		<div class="bg-success text-write">
+			<h2 class="navbar-brand app-name">reCICLO Administration portal</h2>
+		</div>
+		<br />
+		<form class="form-signin needs-validation border border-dark"
+			novalidate="novalidate" name="login-form" th:action="@{/login}"
+			method="post">
+			<div class="text-center mb-4">
+				<h1 class="h2 mb-3 font-weight-normal">Login form</h1>
+				<div th:if="${#httpServletRequest.getParameter('error')}"
+					class="alert alert-danger" role="alert">Usuario o contraseña
+					no válidos</div>
+				<div th:if="${#httpServletRequest.getParameter('logout')}"
+					class="alert alert-info" role="alert">Sesion cerrada. Gracias</div>
+			</div>
+			<label for="username">Usuario</label>
+			<div class="form-label-group input-group mb-3">
+				<div class="input-group-prepend">
+					<span class="input-group-text"><i class="fas fa-user"></i></span>
+				</div>
+				<input
+					type="text"
+					id="username"
+					name="username"
+					class="form-control"
+					placeholder="Usuario"
+					required="required"
+					autofocus="autofocus" />
+				<div class="invalid-feedback">Required.</div>				
+			</div>
+			<label for="username">Password</label>	
+			<div class="form-label-group input-group mb-3">
+				<div class="input-group-prepend">
+					<span class="input-group-text"><i class="fas fa-lock"></i></span>
+				</div>
+				<input
+					type="password"
+					id="password"
+					name="password"
+					class="form-control"
+					placeholder="Contraseña"
+					required="required"
+					autofocus="autofocus" />
+				<div class="invalid-feedback">Required.</div>			
+			</div>
+			<div>
+				<button class="btn btn-lg btn-primary btn-block" type="submit">
+					<i class="fas fa-sign-in-alt fa-lg" style="color:white"></i> Entrar
+				</button>
+			</div>
+		</form>
+		<p class="mt-3 mb-3 text-muted text-center">&copy; reCICLO</p>
+	</div>
+	<script type="text/javascript" th:src="@{js/all.js}"></script>
+	<script type="text/javascript" th:src="@{js/jquery-3.4.1.min.js}"></script>
+	<script type="text/javascript" th:src="@{js/bootstrap.min.js}"></script>	
+</body>
+</html>
