@@ -8,3 +8,22 @@ function initMap() {
 		zoom : 8
 	});
 }
+
+$('#opener').on('click', function() {		
+	var map = $('#map-container');
+	var container = $('#container');
+	if (map.hasClass("col-md-4")) {
+		map.removeClass('col-md-4')
+		map.addClass('col-md-1')
+		container.removeClass('col-md-8')
+		container.addClass('col-md-11')
+		$('#mapShadow').css('opacity', '0.2');
+	} else {
+		map.removeClass('col-md-1')
+		map.addClass('col-md-4')
+		container.removeClass('col-md-11')
+		container.addClass('col-md-8')
+		$('#mapShadow').css('opacity', '0');
+	}	
+	return false;	
+});

@@ -80,7 +80,7 @@ body, html {
 }
 
 .brand-logo {
-	border-right: 1px solid #00cc00;
+	border-right: 1px solid #00ec00;
 	margin: 0px;
 	padding: 0px;
 }
@@ -197,7 +197,7 @@ ul.sidebar-items li {
 }
 
 #header li {
-	border-left: 1px solid #00cc00;
+	border-left: 1px solid #00ec00;
 	font-family: 'Trebuchet MS'
 }
 
@@ -212,7 +212,7 @@ ul.sidebar-items li {
 }
 
 #header li a:hover {
-	background-color: #00b300;
+	background-color: #00ec00;
 	font-weight: normal;
 }
 

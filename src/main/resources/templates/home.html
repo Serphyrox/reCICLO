@@ -32,8 +32,8 @@ html, body {
 		<div class="col-md-2 brand-logo h-100">
 			<ul class="navbar-nav mr-auto">
 				<li class="nav-item"><span class="nav-link text-white">
-						<img th:src="@{img/logo.svg}" alt="reCICLO" height="20px"
-						width="100px" />
+						<img th:src="@{img/logo_horizontal_blanco.png}" alt="reCICLO"
+						width="150px" />
 				</span></li>
 			</ul>
 		</div>
@@ -53,29 +53,36 @@ html, body {
 			</ul>
 		</div>
 	</nav>
-<!-- 	<div class="container-fluid"> -->
-<!-- 		<div class="row"> -->
-			<!-- 			<nav class="col-md-2 d-none d-md-block bg-light sidebar bd-sidebar"> -->
-			<!-- 				<div class="sidebar-sticky"> -->
-
-			<!-- 					<h6 -->
-			<!-- 						class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-3 mb-1 text-muted"> -->
-			<!-- 						<span><i class="fas fa-home"></i>&ensp;Home</span> <a -->
-			<!-- 							class="d-flex align-items-center text-muted" -->
-			<!-- 							th:classappend="${classActiveInbox}" th:href="@{/home}"> </a> -->
-			<!-- 					</h6> -->
-			<!-- 				</div> -->
-			<!-- 			</nav> -->
-<!-- 			<main role="main" class="col-md-10 col-lg-10 pt-3 px-4"> -->
-<!-- 				<div> -->
-<!-- 					<p class="text-muted">Welcome!</p> -->
-<!-- 				</div> -->
-<!-- 			</main> -->
-<!-- 			<div class="col-md-12 col-lg-12 pt-3 px-4"> -->
-				<div id='map'></div>
-<!-- 			</div> -->
-<!-- 		</div> -->
-<!-- 	</div> -->
+	<div class="row col-12" style="padding: 0; margin: -3px 0px 0px 0px;">
+		<div id="container" class="col-md-8"
+			style="padding: 0; margin: 0; display: flex">
+			<div class="align-bottom col-md-11" style="margin:2vh; border: 100px">
+				<ul class="nav nav-tabs" id="myTab" role="tablist" >
+					<li class="nav-item"><a class="nav-link active"
+						id="details-tab" data-toggle="tab" href="#details" role="tab"
+						aria-controls="details" aria-selected="true">Details</a></li>
+					<li class="nav-item"><a class="nav-link" id="attachments-tab"
+						data-toggle="tab" href="#attachments" role="tab"
+						aria-controls="attachments" aria-selected="false">Attachments</a></li>
+				</ul>			
+				<div class="tab-content" id="myTabContent">
+					<div class="tab-pane fade show active" id="details" role="tabpanel"
+						aria-labelledby="details-tab"></div>
+					<div class="tab-pane fade" id="attachments" role="tabpanel"
+						aria-labelledby="attachments-tab"></div>
+				</div>
+			</div>
+			<a href="#" id="opener"
+				style="margin-left: auto; margin-right: -16px; margin-top: 15px; z-index: 20;"><i
+				style="color: #fff" class="fas fa-caret-right fa-3x"></i></a>
+		</div>
+		<div id="map-container" class="col-md-4"
+			style="z-index: 10; overflow: hidden; position: relative; height: 94vh; padding: 0; margin: 0;">
+			<div id='mapShadow'
+				style="position: absolute; background: #000; z-index: 15; height: 94vh; width: 100%; opacity: 0"></div>
+			<div style="z-index: 5" id='map'></div>
+		</div>
+	</div>
 	<script type="text/javascript" th:src="@{js/jquery-3.4.1.min.js}"></script>
 	<script type="text/javascript" th:src="@{js/home.js}"></script>
 	<script type="text/javascript" th:src="@{js/all.js}"></script>
