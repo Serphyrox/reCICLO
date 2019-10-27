@@ -30,7 +30,7 @@ html, body {
 </style>
 	<nav id="header"
 		class="navbar navbar-expand-lg sticky-top flex-md-nowrap p-0">
-		<div class="col-md-2 brand-logo h-100" style="margin-right: 2%">
+		<div class="brand-logo h-100" style="margin-right: 2%">
 			<ul class="navbar-nav mr-auto">
 				<li class="nav-item"><span class="nav-link text-white">
 						<img th:src="@{img/logo_horizontal_blanco.png}" alt="reCICLO"
@@ -74,7 +74,7 @@ html, body {
 					<div class="tab-pane fade show active" id="details" role="tabpanel"
 						aria-labelledby="details-tab" style="margin: 1vw 2vw">
 						<div class="row">
-							<p style="font-family: reCICLO; font-size: 21px; color: #646464">Bienvenidos</p>
+							<p class="titulo">Bienvenidos</p>
 						</div>
 						<ul>
 							<li class="texto">Estadisticas de reciclaje en tiempo real</li>
@@ -88,11 +88,11 @@ html, body {
 						<table class="table">
 							<tbody>
 								<tr>
-									<th style="width: 15vw; background: #FED700"></th>
-									<th style="width: 12vw; background: #A2A0A1"></th>
-									<th style="width: 8vw; background: #2042A4"></th>
-									<th style="width: 5vw; background: #227407"></th>
-									<th style="width: 3vw; background: #64360C"></th>
+									<th style="width: 15%; background: #FED700"></th>
+									<th style="width: 12%; background: #A2A0A1"></th>
+									<th style="width: 8%; background: #2042A4"></th>
+									<th style="width: 5%; background: #227407"></th>
+									<th style="width: 3%; background: #64360C"></th>
 								</tr>
 							</tbody>
 						</table>
@@ -113,12 +113,102 @@ html, body {
 								style="width: 16px; height: 16px; background: #64360C; border: solid 1px;"></div>
 							<p class="texto-pequeno my-auto">Orgánico</p>
 						</div>
-						<div class="row" style="margin-top: 10px;">
-							<div class="col-md-6">
-								<p class="subtitulos">Contenedores mas utilizados</p>
+						<div class="row" style="margin-top: 5vh;">
+							<div class="col-md-6" style="padding: 0; margin: 0">
+								<p class="subtitulos">Nº de personas que reciclan</p>
+								<div class="col-md-7"
+									style="margin-left: auto; margin-right: auto;">
+									<canvas id="myChart" width="275px" height="275px"></canvas>
+								</div>
+								<span class="textoTitulo"><span class="titulo">73%</span>
+									<br>de la población de castellón reciclan</span>
 							</div>
-							<div class="col-md-6">
-								<p class="subtitulos">Contenedores mas utilizados</p>
+							<div class="col-md-6" style="padding: 0; margin: 0">
+								<p class="subtitulos">Alerta de contenedores llenos</p>
+								<table class="col-md-12">
+									<thead style="border: solid 1px; text-align: center">
+										<tr>
+											<th class="ltabla" style="width: 20%">Tipo</th>
+											<th class="ltabla" style="width: 40%">Ubicación</th>
+											<th class="ltabla" style="width: 20%">Cap.</th>
+											<th class="ltabla" style="width: 20%">%Lleno</th>
+										</tr>
+									</thead>
+									<tbody style="border: solid 1px; text-align: center">
+										<tr>
+											<td><div
+													style="width: 16px; height: 16px; background: #FED700; border: solid 1px; margin: auto;"></div>
+											</td>
+											<td class="ltablaText">C/Doctor Sapena, 45</td>
+											<td class="ltablaText">1000</td>
+											<td class="ltablaText">97%</td>
+										</tr>
+										<tr>
+											<td><div
+													style="width: 16px; height: 16px; background: #FED700; border: solid 1px; margin: auto;"></div>
+											</td>
+											<td class="ltablaText">C/ Blasco ibañez,3</td>
+											<td class="ltablaText">1000</td>
+											<td class="ltablaText">97%</td>
+										</tr>
+										<tr>
+											<td><div
+													style="width: 16px; height: 16px; background: #2042A4; border: solid 1px; margin: auto;"></div>
+											</td>
+											<td class="ltablaText">C/ Arquitecto guardiola</td>
+											<td class="ltablaText">1000</td>
+											<td class="ltablaText">96%</td>
+										</tr>
+										<tr>
+											<td><div
+													style="width: 16px; height: 16px; background: #A2A0A1; border: solid 1px; margin: auto;"></div>
+											</td>
+											<td class="ltablaText">C/ Castorcillo mono, 12</td>
+											<td class="ltablaText">1000</td>
+											<td class="ltablaText">95%</td>
+										</tr>
+										<tr>
+											<td><div
+													style="width: 16px; height: 16px; background: #FED700; border: solid 1px; margin: auto;"></div>
+											</td>
+											<td class="ltablaText">Av. Quehago JOAQUI, sn</td>
+											<td class="ltablaText">1000</td>
+											<td class="ltablaText">95%</td>
+										</tr>
+										<tr>
+											<td><div
+													style="width: 16px; height: 16px; background: #64360C; border: solid 1px; margin: auto;"></div>
+											</td>
+											<td class="ltablaText">C/ Estrella Mandarín,31</td>
+											<td class="ltablaText">1000</td>
+											<td class="ltablaText">93%</td>
+										</tr>
+										<tr>
+											<td><div
+													style="width: 16px; height: 16px; background: #FED700; border: solid 1px; margin: auto;"></div>
+											</td>
+											<td class="ltablaText">Av. Bosques de la cruz, 22</td>
+											<td class="ltablaText">1000</td>
+											<td class="ltablaText">92%</td>
+										</tr>
+										<tr>
+											<td><div
+													style="width: 16px; height: 16px; background: #2042A4; border: solid 1px; margin: auto;"></div>
+											</td>
+											<td class="ltablaText">C/ Oriente próximo</td>
+											<td class="ltablaText">1000</td>
+											<td class="ltablaText">92%</td>
+										</tr>
+										<tr>
+											<td><div
+													style="width: 16px; height: 16px; background: #227407; border: solid 1px; margin: auto;"></div>
+											</td>
+											<td class="ltablaText">Av. Tralará</td>
+											<td class="ltablaText">1000</td>
+											<td class="ltablaText">90%</td>
+										</tr>
+									</tbody>
+								</table>
 							</div>
 						</div>
 					</div>
@@ -236,7 +326,7 @@ html, body {
 								</tr>
 								<tr>
 									<td>8888</td>
-									<td>Desecho común </td>
+									<td>Desecho común</td>
 									<td>C/ Común cerdito</td>
 									<td>52036</td>
 									<td>1255</td>
@@ -263,13 +353,15 @@ html, body {
 				style="color: #fff" class="fas fa-caret-right fa-5x"></i></a>
 		</div>
 		<div id="map-container" class="col-md-4"
-			style="z-index: 10; overflow: hidden; position: relative; height: 92vh; padding: 0; margin: 0;">
+			style="z-index: 10; overflow: hidden; position: relative; height: 94vh; padding: 0; margin: 0;">
 			<div id='mapShadow'
 				style="position: absolute; background: #000; z-index: 0; height: 92vh; width: 100%; opacity: 0.1"></div>
 			<div style="z-index: 5" id='map'></div>
 		</div>
 	</div>
 	<script type="text/javascript" th:src="@{js/jquery-3.4.1.min.js}"></script>
+	<script type="text/javascript" th:src="@{js/moment.js}"></script>
+	<script type="text/javascript" th:src="@{js/graph.js}"></script>
 	<script type="text/javascript" th:src="@{js/home.js}"></script>
 	<script type="text/javascript" th:src="@{js/all.js}"></script>
 	<script type="text/javascript" th:src="@{js/bootstrap.min.js}"></script>

@@ -18,34 +18,57 @@
 	src: url("AvenirNextLTPro-Demi.otf") format("opentype");
 }
 
-@font-face {
-	font-family: reCICLONormal;
-	src: url("AvenirNextLTPro-It.otf") format("opentype");
-}
+/* @font-face { */
+/* 	font-family: reCICLO; */
+/* 	src: url("AvenirNextLTPro-It.otf") format("opentype"); */
+/* } */
 
 ol.v {
 	list-style-type: none;
 }
 
 .table{
-	width: 60vw;
+	width: 100%;
 	height: 50px;
 }
 
+.titulo {
+	font-family: reCICLO; 
+	font-size: 28px; 
+	color: #A19E9E;
+}
+
+.textoTitulo {
+	font-family: reCICLO; 
+	font-size: 18px; 
+	color: #A19E9E;
+}
+
+.ltabla {
+	font-family: reCICLO;
+	font-size: 18px;
+	color: #5CB979;
+}
+
+.ltablaText {
+	font-family: reCICLO;
+	font-size: 18px;
+}
+
 .texto {
-	font-family: reCICLONormal;
-	font-size: 15px; 
+	font-family: reCICLO;
+	font-size: 23px; 
 }
 
 .texto-pequeno {
-	font-family: reCICLONormal;
-	font-size: 11px; 
+	font-family: reCICLO;
+	font-size: 16px; 
 	margin-right: 2vw;
 	margin-left: 10px;
 }
 
 .subtitulos {
 	font-family: reCICLO; 
-	font-size: 18px; 
+	font-size: 28px; 
 	color: #5CB979;
 }
